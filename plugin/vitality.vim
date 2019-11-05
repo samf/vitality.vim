@@ -72,8 +72,8 @@ function! s:Vitality() " {{{
 
     " These sequences save/restore the screen.
     " They should NOT be wrapped in tmux escape sequences for some reason!
-    let save_screen    = "\<Esc>[?1049h"
-    let restore_screen = "\<Esc>[?1049l"
+    let save_screen    = &t_ti
+    let restore_screen = &t_te
 
     " These sequences tell iTerm2 to change the cursor shape.
     let cursor_to_normal = "\<Esc>]50;CursorShape=" . g:vitality_normal_cursor . "\x7"
